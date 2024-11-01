@@ -1,0 +1,252 @@
+/*===== RESET STYLES =====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+body {
+    color: #333;
+    background: #f9fbfd;
+}
+
+/*===== HEADER STYLES =====*/
+header {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    padding: 1.25rem 5%;
+    align-items: center;
+    background: #2c3e50;
+    justify-content: space-between;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    gap: 1rem;
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+}
+
+.nav-toggle {
+    border: none;
+    display: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+}
+
+/*===== RESPONSIVE NAVIGATION =====*/
+@media (max-width: 768px) {
+    .nav-links {
+        top: 10%;
+        right: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem 0;
+        position: absolute;
+        text-align: center;
+        background: #2c3e50;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: inline-block;
+    }
+}
+
+/*===== HERO STYLES =====*/
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(145deg, #1f2933, #3a4d5c);
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: #f39c12;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: #e67e22;
+}
+
+/*===== VIDEO STYLES =====*/
+.video {
+    width: 100%;
+    display: flex;
+    margin-top: 1.875rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video iframe {
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+/*===== FEATURES & REVIEW STYLES =====*/
+.features,
+.reviews,
+.signup {
+    display: flex;
+    padding: 60px 4%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features h2,
+.reviews h2,
+.signup h2 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-size: clamp(1.3rem, 0.9000000000000001rem + 1.9999999999999998vw, 2.4rem);
+}
+
+.feature-list,
+.review-list {
+    gap: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.feature-item,
+.review-item {
+    width: 100%;
+    padding: 30px;
+    text-align: left;
+    background: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover,
+.review-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item img,
+.review-item img {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.review-item p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.review-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/*===== SIGNUP STYLES =====*/
+.signup form {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup_info {
+    margin-bottom: 1rem;
+}
+
+.signup form input,
+.signup form button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #2c3e50;
+}
+
+.signup form input {
+    flex: 1;
+    max-width: 300px;
+}
+
+.signup form button {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: #f39c12;
+    transition: background 0.3s ease-in-out;
+}
+
+.signup form button:hover {
+    background: #e67e22;
+}
+
+/*===== BREAKPOINT STYLES =====*/
+@media (max-width: 768px) {
+
+    .feature-list,
+    .review-list {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+}
